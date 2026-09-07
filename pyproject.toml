@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "template-agent-base"
+version = "1.0.0"
+description = "Standard corporate boilerplate skeleton for provisioning new autonomous platform agents."
+authors = ["Agent Architecture Guild <agents@company.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.0"
+# Explicit corporate utility package dependency pulled from your private artifact layer
+enterprise-agent-core = { version = "^1.0.0", source = "private-registry" }
+langchain-core = "^0.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
